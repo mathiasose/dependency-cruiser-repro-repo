@@ -6,14 +6,13 @@
   "scripts": {
     "build": "tsc",
     "depcruise": "depcruise --config .dependency-cruiser.js -- src",
-    "depcruise:graph": "depcruise -T dot --config .dependency-cruiser.js -- src | dot -T svg > dependency-cruiser-result.svg",
+    "depcruise:graph": "npx -p dependency-cruiser@10.1.0 depcruise -T dot --config .dependency-cruiser.js -- src | dot -T svg > dependency-cruiser-result.svg",
     "depcruise:json-stdout": "depcruise -T json --config .dependency-cruiser.js -- src"
   },
   "keywords": [],
   "author": "Sander Verweij (https://sverweij.github.io/)",
   "license": "MIT",
   "devDependencies": {
-    "dependency-cruiser": "^8.2.0",
     "typescript": "^3.8.3"
   }
 }
