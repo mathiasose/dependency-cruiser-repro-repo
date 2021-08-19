@@ -6,7 +6,7 @@
   "scripts": {
     "build": "tsc",
     "depcruise": "depcruise --config .dependency-cruiser.js -- src",
-    "depcruise:graph": "npx -p dependency-cruiser@10.1.0 depcruise -T dot --config .dependency-cruiser.js -- src | dot -T svg > dependency-cruiser-result.svg",
+    "depcruise:graph": "npx -p dependency-cruiser@10.1.0 -p typescript@3.8.3 depcruise -T dot --config .dependency-cruiser.js -- src | dot -T svg > dependency-cruiser-result.svg",
     "depcruise:json-stdout": "depcruise -T json --config .dependency-cruiser.js -- src"
   },
   "keywords": [],
